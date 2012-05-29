@@ -8,3 +8,9 @@ Template.sidebar.categories = function() {
 Template.articles.articles = function() {
   return Formulas.find({}, {sort: {category: 1}});
 };
+
+Template.articles.rerender_formulas = function() {
+  Meteor.setTimeout(function() {
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+  }, 500);
+};
