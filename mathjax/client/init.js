@@ -12,5 +12,5 @@ Template.articles.articles = function() {
 Template.articles.rerender_formulas = function() {
   Meteor.setTimeout(function() {
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-  }, 500);
+  }, 2000);
 };
