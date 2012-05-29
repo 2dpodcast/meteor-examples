@@ -5,6 +5,11 @@
 
 @textColor: black;
 
+// Removing The Dotted Outline
+// http://css-tricks.com/removing-the-dotted-outline/
+// Firefox: about:config
+//   browser.display.focus_ring_width -> 0
+
 .about {
   margin-bottom: 1em;
   padding: 9px 14px;
@@ -14,10 +19,20 @@
   font-style: italic;
 }
 
+.content {
+  margin-top: 1em;
+}
+
 article {
   margin-bottom: 1em;
 }
 
-.nav-list .selected {
-  background-color: yellow;
+.nav-list {
+  .selected {
+    background-color: @orange;
+  }
+  > li {
+    padding-left: 0.5em;
+    > a:hover { background-color: transparent; }
+  }
 }
