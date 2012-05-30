@@ -36,3 +36,31 @@ article {
     > a:hover { background-color: transparent; }
   }
 }
+
+#add-category:hover {
+  background-color: transparent;
+}
+
+.modal {
+  margin: -350px 0 0 -350px;
+  width: 700px;
+
+  textarea, #live-preview {
+    width: 96%;
+    margin: .5em auto;
+    padding: .5em .5em;
+  }
+
+  textarea {
+    font-family: DejaVu Sans Mono, monospace;
+  }
+}
+
+.modal-footer {
+  padding-right: 3em;
+}
+
+#live-preview {
+  background-color: lighten(@orange, 40%);
+  min-height: 3em;
+}

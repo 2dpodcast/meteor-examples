@@ -4,6 +4,7 @@
     {{#each categories}}
       <li><a href="#">{{this}}</a></li>
     {{/each}}
+      <li id="add-category" contenteditable="true">New Category</li>
     </ul>
   </div>
 </template>
@@ -31,7 +32,8 @@
 
 <template name="about">
   <div class="span4">
-    <p><a data-toggle="modal" href="#new-formula" class="btn btn-primary btn-large">New Formula</a>
+    <p><a data-toggle="modal" href="#new-formula"
+          class="btn btn-primary btn-large">New Formula</a>
   </div>
   <div class="span8 about">
     <p>A personal notebook of non-obvious-formulas
@@ -40,11 +42,16 @@
   <div id="new-formula" class="modal hide fade">
     <div class="modal-header">
       <button class="close" data-dismiss="modal">×</button>
-      <h3>Input a new math formula</h3>
     </div>
+
     <div class="modal-body">
-      <p>One fine body…</p>
+      <h3>Live preview</h3>
+      <div id="live-preview"></div>
+
+      <h3>Input a new math formula</h3>
+      <textarea rows="4" id="input">$$\sin^2x + \cos^2x = 1$$</textarea>
     </div>
+
     <div class="modal-footer">
       <a href="#" class="btn" data-dismiss="modal">Close</a>
       <a href="#" class="btn btn-primary">Save changes</a>

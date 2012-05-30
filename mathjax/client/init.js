@@ -3,12 +3,16 @@
 Session.set('selected_category', null);
 
 Template.sidebar.categories = function() {
-  var f = Formulas.find().fetch();
-  return _.chain(f).map(function(o) { return o.category; }).uniq().value();
+  var categories = Formulas.find().map(function(doc) {
+    return doc.category;
+  });
+  return _.unique(categories);
 };
 
 Template.articles.articles = function() {
-  return Formulas.find({category: Session.get('selected_category')}, {sort: {category: 1}});
+  return Formulas.find({
+    category: Session.get('selected_category')
+  });
 };
 
 Template.articles.rerender_formulas = function() {
