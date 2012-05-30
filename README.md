@@ -28,6 +28,7 @@ Misc:
 
 * [How can I listen to when a template is rendered in Meteor?](http://stackoverflow.com/questions/10259879/how-can-i-listen-to-when-a-template-is-rendered-in-meteor)
 * [Callback after the DOM was updated in Meteor.js](http://stackoverflow.com/questions/10109788/callback-after-the-dom-was-updated-in-meteor-js)
+* CSS [contenteditable](http://jsbin.com/owavu3) attribute example
 
 Apps:
 
