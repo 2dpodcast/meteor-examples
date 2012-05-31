@@ -38,10 +38,21 @@ Template.sidebar.events = {
       // console.log(event.target);
       var category = $(event.target).text().trim();
       if (_.indexOf(Template.sidebar.categories(), category) < 0 && category !== 'New Category') {
+        alert('New category "'+ category + '" was created.');
         Session.set('selected_category', category);
       } else {
-        alert('Name already taken!');
+        alert('Name already taken.');
       }
+
     };
   }
 };
+
+Template.newformula.events = {
+  'keyup #input-math': makePreview
+};
+
+function makePreview(event) {
+  $('#live-preview').html($(event.target).val());
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub, "live-preview"]);
+}

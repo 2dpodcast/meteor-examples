@@ -39,6 +39,10 @@
     <p>A personal notebook of non-obvious-formulas
   </div>
 
+  {{>newformula}}
+</template>
+
+<template name="newformula">
   <div id="new-formula" class="modal hide fade">
     <div class="modal-header">
       <button class="close" data-dismiss="modal">×</button>
@@ -49,7 +53,7 @@
       <div id="live-preview"></div>
 
       <h3>Input a new math formula</h3>
-      <textarea rows="4" id="input">$$\sin^2x + \cos^2x = 1$$</textarea>
+      <textarea rows="4" id="input-math">$$\sin^2x + \cos^2x = 1$$</textarea>
     </div>
 
     <div class="modal-footer">
