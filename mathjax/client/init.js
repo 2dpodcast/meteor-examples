@@ -28,5 +28,20 @@ Template.sidebar.events = {
     var li = $(event.target).closest('li');
     li.closest('ul').find('li').removeClass('selected')
     li.addClass('selected');
+  },
+  'keydown #add-category': function(event) {
+    var escape = event.which == 27,
+        enter = event.which == 13;
+    // console.log(event.which);
+    if (enter) {
+      event.preventDefault();
+      // console.log(event.target);
+      var category = $(event.target).text().trim();
+      if (_.indexOf(Template.sidebar.categories(), category) < 0 && category !== 'New Category') {
+        Session.set('selected_category', category);
+      } else {
+        alert('Name already taken!');
+      }
+    };
   }
 };

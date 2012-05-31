@@ -29,17 +29,35 @@ article {
 
 .nav-list {
   .selected {
-    background-color: @orange;
+    background-color: lighten(@yellow, 15%);
   }
   > li {
     padding-left: 0.5em;
-    > a:hover { background-color: transparent; }
+    > a {
+      color: @linkColorHover;
+      font-weight: bold;
+      &:hover { background-color: transparent; }
+    }
   }
 }
 
-#add-category:hover {
-  background-color: transparent;
+// sidebar: categories
+
+[contenteditable]:hover:after {
+  content: ' click to edit';
+  font-style: italic;
+  color: #aaa;
 }
+
+[contenteditable]:hover, [contenteditable]:focus {
+  background: lighten(@yellow, 30%);
+}
+
+[contenteditable]:focus:after {
+  content: '';
+}
+
+// Modal Window
 
 .modal {
   margin: -350px 0 0 -350px;
