@@ -6,17 +6,22 @@ Players = new Meteor.Collection("players");
 Session.set("score", -1);
 Session.set("name", 1);
 
-
 if (Meteor.is_client) {
+  Handlebars.registerHelper('fullName', function(person) {
+    return person.lastName + ", " + person.firstName;
+  });
+
   // Template variables
   Template.leaderboard.players = function () {
     return Players.find({},
-        {sort: {score: Session.get("score"), name: Session.get("name")}});
+       {sort: {lastName: Session.get("name")}, score: Session.get("score")});
   };
 
   Template.leaderboard.selected_name = function () {
     var player = Players.findOne(Session.get("selected_player"));
-    return player && player.name;
+    // return player && player.lastName + ", " + player.firstName;
+    // console.log('Get player from Session:', player);
+    return player;
   };
 
   Template.player.selected = function () {
@@ -60,6 +65,7 @@ if (Meteor.is_client) {
   Template.player.events = {
     'click': function () {
       Session.set("selected_player", this._id);
+      // console.log(Session.get("selected_player"));
     }
   };
 }
@@ -81,8 +87,11 @@ if (Meteor.is_server) {
         "Carl Friedrich Gauss",
         "Nikola Tesla",
         "Claude Shannon"
-      ].forEach(function(name) {
-          Players.insert({ name: name });
+      ].forEach(function(fullname) {
+        var parts = fullname.split(" ");
+        var lastName = parts.pop();
+        var firstName = parts.join(" ");
+        Players.insert({ lastName: lastName, firstName: firstName });
       });
 
       Players.find().forEach(function(player) {
