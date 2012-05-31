@@ -10,36 +10,11 @@
 </template>
 
 <template name="articles">
+  {{>newformula}}
   {{#each articles}}
     {{> article}}
   {{/each}}
   {{rerender_formulas}}
-</template>
-
-<template name="article">
-  <article class="row-fluid">
-    <header class="span10">
-      <h3>{{header}}</h3>
-    </header>
-    <div class="span2">
-      <p><a class="btn" href="#">Delete</a>
-    </div>
-    <div class="description">
-      {{description}}
-    </div>
-  </article>
-</template>
-
-<template name="about">
-  <div class="span4">
-    <p><a data-toggle="modal" href="#new-formula"
-          class="btn btn-primary btn-large">New Formula</a>
-  </div>
-  <div class="span8 about">
-    <p>A personal notebook of non-obvious-formulas
-  </div>
-
-  {{>newformula}}
 </template>
 
 <template name="newformula">
@@ -58,8 +33,32 @@
 
     <div class="modal-footer">
       <a href="#" class="btn" data-dismiss="modal">Close</a>
-      <a href="#" class="btn btn-primary">Save changes</a>
+      <a href="#" class="save btn btn-primary" data-dismiss="modal">Save changes</a>
     </div>
+  </div>
+</template>
+
+<template name="article">
+  <article class="row-fluid">
+    <header class="span10">
+      <h3>{{header}}</h3>
+    </header>
+    <div class="span2">
+      <p><a class="btn" href="#">Delete</a>
+    </div>
+    <div id="{{_id}}" class="description">
+      {{description}}
+    </div>
+  </article>
+</template>
+
+<template name="about">
+  <div class="span4">
+    <p><a data-toggle="modal" href="#new-formula"
+          class="btn btn-primary btn-large">New Formula</a>
+  </div>
+  <div class="span8 about">
+    <p>A personal notebook of non-obvious-formulas
   </div>
 </template>
 
