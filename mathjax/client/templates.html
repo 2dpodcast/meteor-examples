@@ -1,10 +1,11 @@
 <template name="sidebar">
   <div class="well sidebar-nav">
+    <h3>Categories</h3>
     <ul class="nav nav-list">
     {{#each categories}}
       <li><a href="#">{{this}}</a></li>
     {{/each}}
-      <li id="add-category" contenteditable="true">New Category</li>
+      <li id="add-category" contenteditable="true">◀</li>
     </ul>
   </div>
 </template>
@@ -27,7 +28,7 @@
       <h3>Live preview</h3>
       <div id="live-preview"></div>
 
-      <h3>Input a new math formula</h3>
+      <h3 contenteditable="true">Header ▶</h3>
       <textarea rows="4" id="input-math">$$\sin^2x + \cos^2x = 1$$</textarea>
     </div>
 
