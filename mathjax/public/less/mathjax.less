@@ -43,42 +43,33 @@ article {
 
 // sidebar: categories
 
-[contenteditable]:hover:after {
-  content: ' click to enter';
+.nav-list li:focus {
+  background:  lighten(@yellow, 30%);
+}
+.nav-list li {
   font-style: italic;
-  color: #aaa;
+  color: #888;
 }
 
-[contenteditable]:hover, [contenteditable]:focus {
-  background: lighten(@yellow, 30%);
+// live preview
+
+#tex {
+  background-color: lighten(@yellow, 30%);
+  min-height: 3em;
+  padding: 1em;
+  margin: 0.5em 0 1em;
 }
 
-[contenteditable]:focus:after {
-  content: '';
-}
-
-// Modal Window
-
-.modal {
-  margin: -350px 0 0 -350px;
-  width: 700px;
-
-  textarea, #live-preview {
-    width: 96%;
-    margin: .5em auto;
-    padding: .5em .5em;
-  }
-
-  textarea {
-    font-family: DejaVu Sans Mono, monospace;
-  }
-}
-
-.modal-footer {
-  padding-right: 3em;
+textarea {
+  width: 99.25%;
+  font-family: DejaVu Sans Mono, monospace;
+  margin-bottom: 1em;
 }
 
 #live-preview {
-  background-color: lighten(@orange, 40%);
-  min-height: 3em;
+  margin-bottom: 2em;
+}
+
+.navbar .nav > li > a.tug {
+  color: @yellow;
 }
