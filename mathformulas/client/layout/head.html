@@ -8,8 +8,19 @@
   <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
 
   <script src="/js/bootstrap.min.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax:       { inlineMath: [['$','$'], ['\\(','\\)']] },
+      displayAlign:  "left",
+      displayIndent: "2em"
+    });
+  </script>
+  <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
   <script>
     $('.dropdown-toggle').dropdown();
+
     $(document).on('click', '#masthead button:contains("New formula")', function(event) {
       $('#new-formula').toggle();
     });
@@ -19,6 +30,12 @@
     $(document).on('click', '#mathjax .clear', function(event) {
       $('#text').val('');
     });
+
+    $(document).on('keyup', '#text', makePreview);
+    function makePreview(event) {
+      $('#tex').html($('#text').val());
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub, "tex"]);
+    }
   </script>
 
   <link rel="shortcut icon" href="/favicon.ico">
