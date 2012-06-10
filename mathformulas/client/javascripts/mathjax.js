@@ -4,7 +4,6 @@ Template.mathjax.events = {
 
 function saveFormula(event) {
   var text = $('#text').val();
-  console.log('formula:', text.trim());
   if (text.trim() !== "") {
     var formula = {
       category: Session.get('selected_category'),
