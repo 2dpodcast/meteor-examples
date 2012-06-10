@@ -10,6 +10,15 @@
   <script src="/js/bootstrap.min.js"></script>
   <script>
     $('.dropdown-toggle').dropdown();
+    $(document).on('click', '#masthead button:contains("New formula")', function(event) {
+      $('#new-formula').toggle();
+    });
+    $(document).on('click', '#masthead button:contains("Hide")', function(event) {
+      $('#new-formula').hide();
+    });
+    $(document).on('click', '#mathjax .clear', function(event) {
+      $('#text').val('');
+    });
   </script>
 
   <link rel="shortcut icon" href="/favicon.ico">
