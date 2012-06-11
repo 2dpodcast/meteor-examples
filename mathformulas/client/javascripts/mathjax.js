@@ -1,17 +1,17 @@
 Template.mathjax.events = {
-  'click .save': saveFormula
+  'click .save': saveMathFormula
 }
 
-function saveFormula(event) {
+function saveMathFormula(event) {
   var text = $('#text').val();
   if (text.trim() !== "") {
     var formula = {
       category: Session.get('selected_category'),
       text: text,
+      timestamp: (new Date()).getTime()
     };
-    Formulas.insert(formula, function(err, id) {
-      if (err)
-        console.log(err);
+    MathFormulas.insert(formula, function(err, id) {
+      if (err) console.log(err);
     });
   } else {
     alert("Empty formula was not saved!");

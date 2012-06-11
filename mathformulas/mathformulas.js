@@ -1,8 +1,7 @@
-// Formulas --
+// MathFormulas --
 // {
 //        text: String,
-//         tex: String,
 //   timestamp: Number
 // }
 
-Formulas = new Meteor.Collection("formulas");
+MathFormulas = new Meteor.Collection("mathformulas");

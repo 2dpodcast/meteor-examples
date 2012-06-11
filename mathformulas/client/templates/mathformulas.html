@@ -1,0 +1,11 @@
+<template name="mathformulas">
+  {{#each mathformulas}}
+    {{> mathformula}}
+  {{/each}}
+</template>
+
+<template name="mathformula">
+  <article id="{{_id}}" class="well">
+    {{{text}}}
+  </article>
+</template>
