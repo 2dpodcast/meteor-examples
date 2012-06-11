@@ -1,7 +1,5 @@
 Template.mathformulas.mathformulas = function() {
-  var query =  MathFormulas.find({
-    category: Session.get('selected_category')
-  });
+  var query =  MathFormulas.find({category: Session.get('selected_category')}, {sort: {timestamp: -1}});
   query.observe({
     added: function(mathformula) {
       window.setTimeout(function() {

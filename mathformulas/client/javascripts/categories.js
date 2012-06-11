@@ -1,8 +1,8 @@
 Template.categories.categories = function() {
   var categories = MathFormulas.find().map(function(doc) {
-    return  doc.category;
+    return doc.category;
   });
-  return _.unique(categories);
+  return _.unique(categories).sort();
 };
 
 Template.categories.events = {
