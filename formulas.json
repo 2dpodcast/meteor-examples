@@ -1,5 +1,0 @@
-{ "category" : "Concrete Mathematics", "header" : "Sums", "description" : "$$\\sum_{0\\leq k\\leq n} k^2 = \\frac{n(n+1)(2n+1)}6$$", "_id" : "36645dd7-bdf8-4eed-b490-db6806b23183" }
-{ "category" : "Algebra", "header" : "Jedynka", "description" : "$$\\sin^2x + \\cos^2x = 1$$", "_id" : "53fc5748-e18e-4b2d-bc2e-5d77059210ad" }
-{ "category" : "Concrete Mathematics", "header" : "Binomial coefficients", "description" : "$${r\\choose k} = {r-1\\choose k} + {r-1\\choose k-1}$$", "_id" : "5613970a-31e8-4f9e-8bce-dda00f537e7e" }
-{ "category" : "Geometry", "header" : "Volume of a sphere", "description" : "Volume is given by the formula: $$V = \\frac43\\pi r^3$$", "_id" : "c7c0f6c0-bfb4-4630-a351-c92e9d7bccb0" }
-{ "category" : "Geometry", "header" : "Surface area of a sphere", "description" : "Surface area of a sphere is given by the formula: $$A = 4\\pi r^2$$", "_id" : "ce71adaa-cc98-479f-b330-d8dc8aeaf33e" }
