@@ -6,7 +6,7 @@ Template.mathformulas.mathformulas = function() {
     added: function(mathformula) {
       window.setTimeout(function() {
         MathJax.Hub.Queue(["Typeset", MathJax.Hub, mathformula._id]);
-      }, 1000);
+      }, 500);
     }
   });
   return query;

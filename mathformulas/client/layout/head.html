@@ -36,6 +36,10 @@
       $('#tex').html($('#text').val());
       MathJax.Hub.Queue(["Typeset", MathJax.Hub, "tex"]);
     }
+
+    $(document).on('click', '#remove button', function() {
+      $('article .remove').toggle();
+    });
   </script>
 
   <link rel="shortcut icon" href="/favicon.ico">
