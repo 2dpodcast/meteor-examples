@@ -11,7 +11,7 @@
 
 <template name="thing_list">
 {{#each things}}
-  <p {{maybe_selected}}>{{how_many}} people ({{likes}}) like {{name}}</p>
+  <p {{maybe_selected}}>{{how_many}} people {{#if likes}}({{likes}}){{/if}} like {{name}}</p>
 {{else}}
   <p>nie mam rzeczy, które lubię    Ꙩ_Ꙩ</p>
 {{/each}}
