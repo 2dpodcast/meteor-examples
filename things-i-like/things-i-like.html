@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <title>Rzeczy, które lubię</title>
+</head>
+
+<body>
+  <h1>Rzeczy, które lubię</h1>
+
+  {{> thing_list}}
+</body>
+
+<template name="thing_list">
+{{#each things}}
+  <p {{maybe_selected}}>{{how_many}} people ({{likes}}) like {{name}}</p>
+{{else}}
+  <p>nie mam rzeczy, które lubię    Ꙩ_Ꙩ</p>
+{{/each}}
+<footer><button>Like!</button></footer>
+</template>
