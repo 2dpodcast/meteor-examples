@@ -1,0 +1,64 @@
+@bgHTMLColor: #3E303F;
+@bgBodyColor: #FCDE62;
+@headerColor: #A91313;
+@winnerColor: #FC2F39;
+
+html {
+  background-color: @bgHTMLColor;
+  font-family: "Myriad Pro", Verdana, Arial;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+  background-color: @bgBodyColor;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
+h1, h2 {
+  color: @headerColor;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+p {
+  border: solid 1px black;
+  margin-bottom: .125em;
+  padding: .5em 1em;
+}
+
+#new_entry {
+  button {
+    float: right;
+  }
+  input {
+    padding-left: 1em;
+    width: 60%;
+  }
+}
+
+#draw_winner, #new_entry {
+  margin-top: 20px;
+  input, button {
+    font-size: 100%;
+  }
+  button {
+    font-family: "Myriad Pro", Verdana, Arial;
+  }
+}
+
+.winner {
+  padding: 0 1em;
+  float: right;
+  font-weight: bold;
+  color: @winnerColor;
+}
+
+.highlight {
+  background-color: @winnerColor;
+  color: @bgBodyColor;
+}

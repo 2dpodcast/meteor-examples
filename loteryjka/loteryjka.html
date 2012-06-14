@@ -5,4 +5,28 @@
 
 <body>
   <h1>Loteryjka</h1>
+
+  {{> new_entry}}
+
+  {{> entries}}
+
+  {{> draw_winner}}
 </body>
+
+<template name="entries">
+{{#each participants}}
+  <p>{{name}}{{{maybe_winner}}}</p>
+{{/each}}
+</template>
+
+<template name="new_entry">
+  <div id="new_entry">
+    <input type="text" id="new_entry_name"><button>Dodaj uczestnika</button>
+  </div>
+</template>
+
+<template name="draw_winner">
+  <div id="draw_winner">
+    <button>Losuj zwycięzcę</button>
+  </div>
+</template>
