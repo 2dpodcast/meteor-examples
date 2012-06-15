@@ -9,11 +9,18 @@ if (Meteor.is_client) {
     return Session.equals('selected_thing', this._id) ? "class=selected" : "";
   };
 
+  Template.thing_list.thing_we_like = function() {
+    var likes = "like " + this.name;
+    if (this.likes)
+      likes = "(" + this.likes + ") " + likes;
+    return likes;
+  }
+
   Template.thing_list.how_many = function() {
-    if (!this.likes) return "no";
-    if (this.likes < 5) return "a few";
-    if (this.likes < 20) return "some";
-    return "a lot of";
+    if (!this.likes) return "no people";
+    if (this.likes < 5) return "a few people";
+    if (this.likes < 20) return "some people";
+    return "a lot of people";
   };
 
   Template.thing_list.events = {
