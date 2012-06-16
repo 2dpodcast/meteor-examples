@@ -49,3 +49,4 @@ Domyślnie na Fedorze jest 128.
 
 * [code_buddy](https://github.com/jfahrenkrug/code_buddy) –
   share live code snippets across multiple browsers; with syntax highlighting
+* [chat](https://vimeo.com/40300075) (screencast)
