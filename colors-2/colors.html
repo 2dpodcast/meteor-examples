@@ -1,0 +1,15 @@
+<head>
+  <title>My favorite colors</title>
+</head>
+
+<body>
+  {{> color_list}}
+</body>
+
+<template name="color_list">
+  <ul>
+    {{#colors}}
+      <li>{{name}}</li>
+    {{/colors}}
+  </ul>
+</template>

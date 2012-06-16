@@ -6,10 +6,10 @@
 <body>
   <h1>Things we like</h1>
 
-  {{> thing_list}}
+  {{> things_list}}
 </body>
 
-<template name="thing_list">
+<template name="things_list">
 {{#each things}}
   <p {{maybe_selected}}>{{how_many}} people {{#if likes}}({{likes}}){{/if}} like {{name}}</p>
 {{else}}
