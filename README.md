@@ -27,7 +27,7 @@ Removing remote *implicit-loop* branch:
 
 Zobacz [EMFILE error when too many files in /public](https://github.com/meteor/meteor/issues/102):
 
-    sudo sh -c 'echo 8192 > /proc/sys/fs/inotify/max_user_instances
+    sudo sh -c 'echo 8192 > /proc/sys/fs/inotify/max_user_instances'
 
 Domyślnie na Fedorze jest 128.
 
