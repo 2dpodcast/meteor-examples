@@ -1,6 +1,6 @@
 #!/bin/bash
 
-x=$(meteor mongo mf.meteor.com --url)
+x=$(meteor mongo tex.meteor.com --url)
 n=$(echo $x | sed -re "s#.+://client:(.+)@(.+):(.+)/(.+)#\1 \2 \3 \4#")
 
 set -- $n
