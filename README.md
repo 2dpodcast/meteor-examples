@@ -6,6 +6,11 @@
     npm install colors
 
 
+## Atmosphere
+
+* [Atmosphere Beer. Wings.](https://atmosphere.meteor.com/) – smart packages
+
+
 ## Git
 
 Pushing local branch *implicit-loop* to remote:
