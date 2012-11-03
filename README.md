@@ -86,6 +86,11 @@ Domyślnie na Fedorze jest 128.
 ## Tutorials
 
 * [Creating a document sharing site with Meteor.js](http://www.skalb.com/2012/04/16/creating-a-document-sharing-site-with-meteor-js/) – coffeescript + variation on leaderboard example
+* [What’s This Meteor Thing?](http://net.tutsplus.com/tutorials/javascript-ajax/whats-this-meteor-thing/)
+
+Handlebars.js:
+
+* [An Introduction to Handlebars](http://net.tutsplus.com/tutorials/javascript-ajax/introduction-to-handlebars/)
 
 
 ## Misc stuff
