@@ -43,11 +43,13 @@ console.log(info.green);
 
 Obejście: zamienić `ObjectID(".. id ...")` na `".. id .."`:
 
-    db.players.find().forEach(function(app) {
-      db.players.remove({_id: app._id});
-      app._id = app._id.toString();
-      db.players.insert(app);
-    });
+```js
+db.players.find().forEach(function(app) {
+  db.players.remove({_id: app._id});
+  app._id = app._id.toString();
+  db.players.insert(app);
+});
+```
 
 
 ## Atmosphere
