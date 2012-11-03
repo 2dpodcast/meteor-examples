@@ -32,6 +32,18 @@ Na przykład [tak](http://stackoverflow.com/questions/10165978/how-do-we-or-can-
       info = "Meteor 0.5.0 application starting in development on http://0.0.0.0:3000";
     console.log(info.green);
 
+## How do we insert documents into collections from mongo console?
+
+* [update() broken when working with preexisting mongodb records using ObjectId()](https://github.com/meteor/meteor/issues/61)
+
+Obejście: zamienić `ObjectID(".. id ...")` na `".. id .."`:
+
+    db.players.find().forEach(function(app) {
+      db.players.remove({_id: app._id});
+      app._id = app._id.toString();
+      db.players.insert(app);
+    });
+
 
 ## Atmosphere
 
