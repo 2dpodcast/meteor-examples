@@ -5,32 +5,37 @@
 
 Instalacja:
 
-    npm install -g serve connect express
-    npm install -g coffee-script
-    npm install -g meteorite
-    npm install -g colors
-
+```sh
+npm install -g serve connect express
+npm install -g coffee-script
+npm install -g meteorite
+npm install -g colors
+```
 
 ## Meteor
 
 Instalacja:
 
-    curl https://install.meteor.com | sh
-    meteor create --example leaderboard
-    meteor create ~/hello_world
+```sh
+curl https://install.meteor.com | sh
+meteor create --example leaderboard
+meteor create ~/hello_world
+```
 
 ## How do we use node modules via NPM with meteor?
 
 Na przykład [tak](http://stackoverflow.com/questions/10165978/how-do-we-or-can-we-use-node-modules-via-npm-with-meteor):
 
-    cd hello_world
-    npm install colors
-    mkdir server
-    cat > server/info.js
-    var require = __meteor_bootstrap__.require;
-    require("colors"),
-      info = "Meteor 0.5.0 application starting in development on http://0.0.0.0:3000";
-    console.log(info.green);
+```sh
+cd hello_world
+npm install colors
+mkdir server
+cat > server/info.js
+var require = __meteor_bootstrap__.require;
+require("colors"),
+  info = "Meteor 0.5.0 application starting in development on http://0.0.0.0:3000";
+console.log(info.green);
+```
 
 ## How do we insert documents into collections from mongo console?
 
